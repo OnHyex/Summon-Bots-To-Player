@@ -15,5 +15,6 @@ namespace SummonBotsToPlayer
             return $"{Author}.{Name}";
         }
         public override int MPRequirements => (int)MPRequirement.Host;
+        public override string License => "GNU GPL-3.0";
     }
 }
