@@ -5,6 +5,8 @@ using HarmonyLib;
 
 namespace SummonBotsToPlayer
 {
+
+    //TODO: Figure out how to acutally get PLBotController to actually set Path to null
     internal class Command : PublicCommand
     {
         public override string[] CommandAliases()

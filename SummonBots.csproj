@@ -7,8 +7,8 @@
     <ProjectGuid>{7FD0DD89-5302-4340-B441-8A96AEF361E8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Teleport_Bots_to_Player</RootNamespace>
-    <AssemblyName>Teleport Bots to Player</AssemblyName>
+    <RootNamespace>SummonBotsToPlayer</RootNamespace>
+    <AssemblyName>SummonBots</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
