@@ -3,7 +3,7 @@ using PulsarModLoader.Utilities;
 using UnityEngine;
 using HarmonyLib;
 
-namespace TeleportBotsToPlayer
+namespace SummonBotsToPlayer
 {
     internal class Command : PublicCommand
     {
@@ -13,7 +13,7 @@ namespace TeleportBotsToPlayer
         }
         public override string Description()
         {
-            return "summonbots to player";
+            return "Summon bots to player";
         }
         public override void Execute(string arguments, int SenderID)
         {
