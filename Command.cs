@@ -15,9 +15,9 @@ namespace TeleportBotsToPlayer
         {
             return "summonbots to player";
         }
-        public override void Execute(string arguments, int senderid)
+        public override void Execute(string arguments, int SenderID)
         {
-            PLPlayer MyPlayer = PulsarModLoader.Utilities.HelperMethods.GetPlayerFromPlayerID(senderid);
+            PLPlayer MyPlayer = PulsarModLoader.Utilities.HelperMethods.GetPlayerFromPlayerID(SenderID);
             //if (!PhotonNetwork.isMasterClient)
             //{
             //    Messaging.Echo(MyPlayer, "Not allowed to use mod if not host");
@@ -27,10 +27,11 @@ namespace TeleportBotsToPlayer
             {
                 if (player != null && player.GetPawn() != null && !player.GetPawn().IsDead && player.TeamID == 0 && player.IsBot && MyPlayer != null && MyPlayer.GetPawn() != null && (!MyPlayer.GetPawn().SpawnedInArena || !MyPlayer.GetPawn().IsDead))
                 {
+                    
                     //SummonBotFix.botsToTeleport++;
-                    PLBotController botController = player.GetComponent<PLBotController>();
-                    PLBot bot = botController.MyBot;
-                    PLPawn botpawn = botController.MyPawn;
+                    PLBot bot = (PLBot)player.GetComponent(typeof(PLBot));
+                    PLPawn botpawn = player.GetPawn();
+                    PLBotController botController = (PLBotController)botpawn.MyController;
                     Vector3 vector = MyPlayer.GetPawn().transform.position;
                     bot.AI_TargetTLI = MyPlayer.MyCurrentTLI;
                     int ttiid = PLBotController.GetTargetTTIIDFromTargetPos(bot.AI_TargetTLI, vector);
