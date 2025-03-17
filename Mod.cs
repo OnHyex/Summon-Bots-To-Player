@@ -14,6 +14,6 @@ namespace Teleport_Bots_to_Player
         {
             return $"{Author}.{Name}";
         }
-        public override int MPRequirements => (int)MPRequirement.None;
+        public override int MPRequirements => (int)MPRequirement.Host;
     }
 }
