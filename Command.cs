@@ -29,7 +29,6 @@ namespace SummonBotsToPlayer
             {
                 if (player != null && player.GetPawn() != null && !player.GetPawn().IsDead && player.TeamID == 0 && player.IsBot && MyPlayer != null && MyPlayer.GetPawn() != null && (!MyPlayer.GetPawn().SpawnedInArena || !MyPlayer.GetPawn().IsDead))
                 {
-                    
                     //SummonBotFix.botsToTeleport++;
                     PLBot bot = (PLBot)player.GetComponent(typeof(PLBot));
                     PLPawn botpawn = player.GetPawn();
